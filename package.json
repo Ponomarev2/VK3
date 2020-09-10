@@ -1,23 +1,20 @@
 {
-  "homepage": "http://Machalkas.github.io/VkHakatonWeb",
+  "homepage": "http://machalkas.github.io/VkHakatonWeb",
   "name": "kozodoi-club-hack",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "surge-deploy": "npm run build && surge ./build --domain kozodoi-club-hack.surge.sh",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "devDependencies": {
     "cross-env": "^5.2.0",
-    "gh-pages": "^3.1.0",
     "react-hot-loader": "^4.9.0",
     "react-scripts": "^3.1.2",
     "surge": "^0.21.3"
@@ -30,7 +27,6 @@
     "babel-eslint": "^10.0.3",
     "chalk": "^2.4.2",
     "core-js": "^3.1.4",
-    "debug": "^4.1.1",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
